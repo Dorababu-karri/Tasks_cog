@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Community Events</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="registration.html">Register</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h1>Register for an Event</h1>
+      <form id="eventForm" onsubmit="return submitRegistration();">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="eventType">Event Type</label>
+        <select id="eventType" name="eventType" required>
+          <option value="">Choose an event</option>
+          <option value="Outdoor Market">Outdoor Market</option>
+          <option value="Music Night">Music Night</option>
+          <option value="Workshop">Workshop</option>
+        </select>
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write a note" required></textarea>
+
+        <button type="submit">Send Registration</button>
+        <div id="status" class="message"></div>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Community Events</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
